@@ -3,25 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>library</string>
+	<string>singleton</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NSArray *librarySearchPaths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-    NSString *libraryDirectory = [librarySearchPaths count] == 0 ? nil : [librarySearchPaths objectAtIndex:0];</string>
+	<string>+ (instancetype)shared&lt;#name#&gt; {
+        static &lt;#class#&gt; *_shared&lt;#name#&gt; = nil;
+        static dispatch_once_t onceToken;
+        dispatch_once(&amp;onceToken, ^{
+            _shared&lt;#name#&gt; = &lt;#initializer#&gt;;
+        });
+        
+        return _shared&lt;#name#&gt;;
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F66D466C-6734-404F-AECA-9E829BFC4166</string>
+	<string>B7D54969-E36B-4FF3-B774-0BCB7BA0BB5D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>get library directory</string>
+	<string>create a singleton instance</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Library Directory</string>
+	<string>Singleton Implementation</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

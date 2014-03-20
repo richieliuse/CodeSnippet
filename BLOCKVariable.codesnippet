@@ -3,22 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>library</string>
+	<string>BLOCK</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NSArray *librarySearchPaths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-    NSString *libraryDirectory = [librarySearchPaths count] == 0 ? nil : [librarySearchPaths objectAtIndex:0];</string>
+	<string>&lt;#return type#&gt; (^&lt;#block name#&gt;)(&lt;#parameters#&gt;) = ^(&lt;#parameters#&gt;) {
+    &lt;#code#&gt;
+};</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F66D466C-6734-404F-AECA-9E829BFC4166</string>
+	<string>2E14E21A-11F2-4DDD-912E-1683D374F3ED</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>get library directory</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Library Directory</string>
+	<string>BLOCK: Inline as variable</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
